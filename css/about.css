@@ -1,0 +1,16 @@
+
+.about_section{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.company_info{
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.company_info th,
+.company_info td{
+    padding: 1rem;
+}

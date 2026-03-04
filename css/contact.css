@@ -1,0 +1,31 @@
+.form_wrap {
+  max-width: 60rem;
+  margin: 5rem auto;
+  font-size: 1.6rem;
+}
+
+.form_group {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form_label {
+  width: 25%;
+}
+
+.form_input {
+  border: 0.1rem solid;
+  width: 40rem;
+  padding: 0.5em;
+}
+
+.btn_wrap {
+  text-align: center;
+}
+
+.form_btn {
+  background-color: #135580;
+  color: #fff;
+  padding: 0.5rem 3rem;
+}

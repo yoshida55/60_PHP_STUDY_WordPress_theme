@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  width: 100%;
+  background-color: #135580;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 2rem;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.header_nav_list {
+  display: flex;
+  gap: 2rem;
+}
+
+
+.page_title{
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 5rem 0;
+  background-image: url('../img/fv.jpg');
+}

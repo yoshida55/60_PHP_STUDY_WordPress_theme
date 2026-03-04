@@ -1,0 +1,53 @@
+/* 全体のリセット */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 基本のHTMLタグリセット */
+html {
+  line-height: 1.5;
+  width: 100%; 
+}
+
+/* リストのリセット */
+ol, ul{list-style:none;}
+
+/* テーブルのリセット */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/* フォーム全般 */
+input, textarea, select, button {
+  appearance: none; /* ベンダープレフィックスを統一 */
+  -webkit-appearance: none; /* iOS Safari特有の外観リセット */
+  -moz-appearance: none; /* Firefox特有 */
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit; /* フォントスタイルの継承 */
+  color: inherit; /* 親の色を引き継ぐ */
+  outline: none;
+}
+
+/* テキストエリア */
+textarea {
+  resize: vertical;
+}
+
+img{
+  vertical-align: top;
+}

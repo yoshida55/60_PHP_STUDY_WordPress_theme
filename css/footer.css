@@ -1,0 +1,34 @@
+
+.contact_link{
+  display: block;
+  padding: 4rem;
+  background-image: url('../img/news.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 4rem;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.contact_link::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+
+.contact_link_text{
+  position: relative;
+}
+
+.footer {
+  background-color: #135580;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
