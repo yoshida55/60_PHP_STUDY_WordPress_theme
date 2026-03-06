@@ -31,6 +31,9 @@
 
   </main>
 
+  <?php get_theme_file_uri('template-parts/content', 'page'); ?>
+  
+
   <?php endwhile;?>
 <?php endif;?>
 <?php get_footer();?>

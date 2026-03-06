@@ -16,11 +16,13 @@
       </div>
   
       <div class="news_content">
-
+        <?php the_content(); ?>
       </div>
     </section>
-
   </main>
+
+  <?php echo get_theme_file_uri() . '/assets/images/news_sample.jpg'; ?>
+  
 
   <?php endwhile;?>
 <?php endif;?>
