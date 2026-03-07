@@ -1,5 +1,7 @@
 <?php get_header(); ?>
+
 <?php if ( have_posts() ) : ?>
+  template
   <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
@@ -18,12 +20,18 @@
       <div class="news_content">
         <?php the_content(); ?>
       </div>
+
+      <div>
+        <?php the_title(); ?>
+        <?php the_content(); ?>
+      </div>
     </section>
   </main>
-
-  <?php echo get_theme_file_uri() . '/assets/images/news_sample.jpg'; ?>
+ 
+    <?php post
   
-
+  
   <?php endwhile;?>
 <?php endif;?>
+
 <?php get_footer();?>

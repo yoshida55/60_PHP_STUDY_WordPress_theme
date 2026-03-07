@@ -1,4 +1,6 @@
+<?php echo '【テンプレート】' . basename(__FILE__); ?>
 <?php get_header(); ?>
+
 
 <main>
     <h1 class="page_title">お知らせ</h1>
