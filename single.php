@@ -18,20 +18,21 @@
       </div>
   
       <div class="news_content">
-        <?php the_content(); ?>
+        <?php the_title(); ?>
+      <?php the_content(); ?>
       </div>
 
       <div>
-        <?php the_title(); ?>
+
         <?php the_content(); ?>
       </div>
     </section>
   </main>
  
-    <?php post
+
+
   
-  
-  <?php endwhile;?>
+    <?php endwhile;?>
 <?php endif;?>
 
 <?php get_footer();?>
