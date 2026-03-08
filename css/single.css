@@ -1,33 +1,33 @@
-
-.news_wrap{
-    max-width: 100rem;
-    margin: 5rem auto;
+.news_wrap {
+  max-width: 100rem;
+  margin: 5rem auto;
 }
 
-.news_title{
-    font-size: 1.8rem;
-    font-weight: bold;
-    border-bottom: 1px solid;
+.news_title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid;
 }
 
-.news_meta{
-    justify-content: flex-end;
+.news_meta {
+  justify-content: flex-end;
 }
 
-
-.news_content{
-    margin: 3rem auto;
+.news_content {
+  margin: 3rem auto;
+  border: 0.5rem solid red;
+  color: red;
 }
 
-.news_content h2{
-    margin-top: 3rem;
+.news_content h2 {
+  margin-top: 3rem;
 }
 
-.news_content p{
-    margin-top: 1rem;
-    font-size: 1.5rem;
+.news_content p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
-.news_content img{
-    margin-top: 3rem;
+.news_content img {
+  margin-top: 3rem;
 }

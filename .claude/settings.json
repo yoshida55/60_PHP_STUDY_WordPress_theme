@@ -6,7 +6,9 @@
       "Bash(test -f \"D:\\\\50_knowledge\\\\01_memo.md\")",
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 8001}\")",
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 7702}\")",
-      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 9117}\")"
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 9117}\")",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 9268}\")",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 9301}\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude\\projects\\c--Users-sensh-Local-Sites-newtesthome-app-public-wp-content-themes-60-PHP-STUDY-WordPress-theme",

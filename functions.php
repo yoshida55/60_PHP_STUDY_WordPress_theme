@@ -13,7 +13,11 @@ function enqueue_style()
 
   // wp_enqueue_style( $handle, $src)の$srcは、テーマのディレクトリを取得する関数と組み合わせて書くことが多い
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
-}
+
+  wp_enqueue_style('single', get_template_directory_uri() . '/css/single.css');
+  
+  wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
+  }
 
 //  wp_enqueue_scriptsは、CSSとJS両方を読み込むことができるメソッド。まぎらわしい
 add_action('wp_enqueue_scripts', 'enqueue_style');

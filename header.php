@@ -1,4 +1,5 @@
-<?php echo '【テンプレート】' . basename(__FILE__); ?>
+<?php echo '【テンプレート】' . basename(__FILE__)." <br>"; ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,10 +11,6 @@
 <body>
 
 <header class="header">
-    <div class="header_logo">
-        <a href="/"><?php echo '【テンプレート】' . basename(__FILE__); ?>Test株式会社</a>
-    </div>
-
     <nav class="header_nav">
         <ul class="header_nav_list">
             <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>

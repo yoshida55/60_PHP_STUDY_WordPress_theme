@@ -1,3 +1,6 @@
+<!-- ブラウザで該当のファイル名を表示する -->
+<?php echo '【テンプレート】' . basename(__FILE__)."<br>"; ?>
+
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
@@ -19,19 +22,16 @@
   
       <div class="news_content">
         <?php the_title(); ?>
-      <?php the_content(); ?>
-      </div>
-
-      <div>
-
         <?php the_content(); ?>
       </div>
+
+
     </section>
   </main>
  
 
 
-  
+
     <?php endwhile;?>
 <?php endif;?>
 
