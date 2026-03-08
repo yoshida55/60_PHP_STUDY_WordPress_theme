@@ -39,3 +39,10 @@
 - 直接 repo フォルダだけを直して終わりにしない。本番側へ反映されているか確認する
 - 本番フォルダと repo フォルダは役割が違うので、混同しない
 - 同期手順を省略せず、常に `本番を修正 -> repoへコピー -> push` または `pull -> 本番へコピー` のどちらかで運用する
+- 自作バッチは家PCと会社PCで配置場所が違う前提で扱う
+- 自宅PCの自作バッチは `D:\Programs\commit_all.ps1` と `D:\Programs\pull_all.ps1`
+- バッチの場所や対象フォルダが環境ごとに違う可能性があるので、会社PCでは同じパスだと決めつけない
+- バッチの実パスや対象が不明なときは、推測で進めずユーザーに積極的に確認する
+- 自宅PCの自作バッチ `D:\Programs\commit_all.ps1` と `D:\Programs\pull_all.ps1` は `C:\Users\sensh\.codex\codex-skills-repo` を直接対象に含む
+- `commit_all.ps1` の強制プッシュは `--force` ではなく `--force-with-lease` を使う
+- `pull_all.ps1` の強制同期は `git reset --hard origin/<branch>` を使うので、確認ダイアログの内容を見てから実行する
