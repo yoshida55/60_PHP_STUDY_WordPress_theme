@@ -34,20 +34,34 @@
                 <h3 class="news_title"><?php the_title(); ?></h3>
                 
                 <!-- 記事についたカテゴリー -->
-                <ul class="news_category">
+                <!-- <ul class="news_category">
                     <?php $categories = get_the_category();
                     foreach($categories as $category){
                         echo '<li class="news_test">'. $category->cat_name .'</li>';
                     } 
                     ?>
+                </ul> -->
+
+                <!-- 記事のカテゴリ データがある場合だけ表示する-->
+                <?php 
+                // if ( ! empty( $categories ) ) {
+                //     echo '<li>' . esc_html( $categories[0]->name ) . '</li>';
+                // } else {
+                //     echo '<li>カテゴリなし</li>';
+                // } 
+                ?>
+
+
+                <ul class="news_category">
+                <!-- カテゴリ２ -->
+                 <?php $categories = get_the_category(); ?>
+                 <?php foreach($categories as $category){
+                    if($category->name !== 'Uncategorized'){
+                        echo '<li class="news_test">'. $category->cat_name .'</li>';
+                 }};
+                 ?>
                 </ul>
 
-                <!-- 記事のカテゴリ -->
-                <?php if ( ! empty( $categories ) ) {
-                    echo '<li>' . esc_html( $categories[0]->name ) . '</li>';
-                } else {
-                    echo '<li>カテゴリなし</li>';
-                } ?>
 
             </div>
 
