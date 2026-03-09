@@ -1,32 +1,22 @@
 <?php echo '【テンプレート】' . basename(__FILE__); ?>
 <?php get_header(); ?>
 
+  <?php $categories = get_the_category(); ?>
+  <?php $firstCategory = $categories[0]->name; ?>
+  
+
 <main>
     <h1 class="page_title">お知らせ</h1>
     <section class="news_section">
-
-        <!-- カテゴリーによる絞り込み -->
-        <ul class="category_list">
-            <?php 
-            $categories = get_categories();
-            foreach($categories as $category){
-                echo '<li><a class="category_link" href="' . esc_url(get_category_link($category)) . '">' .
-                esc_html($category->name) . '</a></li>';
-            }
-            ?>
-        </ul>
         
-            <li><a class="category_link">イベント</a></li>
-            <li><a class="category_link">グルメ</a></li>
-        </ul>
 
         <!-- ここから記事 -->
         <?php while( have_posts()): the_post(); ?>
 
         <a href="<?php the_permalink(); ?>" class="news_item">
 
-  
-            
+
+        <!-- サムネイル -->
             <?php if (has_post_thumbnail()){ ?>              
                 <?php the_post_thumbnail('thumbnail', ['class' => 'news_img']) ?>
             <?php } else { ?>
@@ -35,6 +25,8 @@
   
 
             <div class="news_info">
+                
+                <!-- 登校日と著者 -->
                 <div class="news_meta">
                     <time class="news_date"><?php the_time('Y.m.d'); ?></time>
                     <p class="author"><?php the_author(); ?></p>
@@ -45,13 +37,25 @@
                 <ul class="news_category">
                     <?php $categories = get_the_category();
                     foreach($categories as $category){
-                        echo '<li>'. $category->cat_name .'</li>';
+                        echo '<li class="news_test">'. $category->cat_name .'</li>';
                     } 
                     ?>
                 </ul>
+
+                <!-- 記事のカテゴリ -->
+                <?php if ( ! empty( $categories ) ) {
+                    echo '<li>' . esc_html( $categories[0]->name ) . '</li>';
+                } else {
+                    echo '<li>カテゴリなし</li>';
+                } ?>
+
             </div>
-            </ul class="post_category">
-                <li><?php echo get_the_category_list(', '); ?></li>
+
+
+
+
+
+
         </a>
 
         <?php endwhile; ?>

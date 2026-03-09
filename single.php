@@ -3,16 +3,19 @@
 
 <?php get_header(); ?>
 
+<!-- ループ内のグローバルを宣言 -->
+<?php global $wp_query; ?>
+
 <?php if ( have_posts() ) : ?>
-  template
   <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
+
     <div class="page_title">お知らせ</div>
 
     <section class="news_wrap">
       <ul class="news_category">
-        <li>お知らせ</li>
+        <li><?php the_category(', '); ?></li>
       </ul>
       <h1 class="news_title">ブログのタイトル</h1>
       <div class="news_meta">
@@ -28,6 +31,8 @@
 
     </section>
   </main>
+
+
  
 
 

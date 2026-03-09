@@ -41,6 +41,7 @@
 - `C:\Users\sensh\.codex\skills` で `git init` しない
 - `.system` は Codex 標準スキルなので、GitHub 管理対象に入れない
 - `.system` をコピー・移動・上書き・Git追跡しない
+<!-- 一時運用メモ: 会社PCで codex-skills-repo の運用が使えなかったため、ユーザーが再開を明示するまでは `C:\Users\sensh\.codex\codex-skills-repo` を更新しない。commit / push もしない。本番側の `C:\Users\sensh\.codex\skills` のみを更新対象にする。このメモは将来復活する可能性があるためコメントで残す。 -->
 - 自作スキルの Git 管理は `C:\Users\sensh\.codex\codex-skills-repo` で行う
 - GitHub リポジトリは `git@github.com:yoshida55/skills-codex-.git` を使う
 - 今の自作スキル同期対象は `memo`
