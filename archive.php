@@ -7,6 +7,15 @@
 
         <!-- カテゴリーによる絞り込み -->
         <ul class="category_list">
+            <?php 
+            $categories = get_categories();
+            foreach($categories as $category){
+                echo '<li><a class="category_link" href="' . esc_url(get_category_link($category)) . '">' .
+                esc_html($category->name) . '</a></li>';
+            }
+            ?>
+        </ul>
+        
             <li><a class="category_link">イベント</a></li>
             <li><a class="category_link">グルメ</a></li>
         </ul>
@@ -15,17 +24,15 @@
         <?php while( have_posts()): the_post(); ?>
 
         <a href="<?php the_permalink(); ?>" class="news_item">
-            <?php if (has_post_thumbnail()){ ?>
-                <?php the_post_thumbnail('thumbnail', array('class'=> 'news_img')); ?>
+
+  
+            
+            <?php if (has_post_thumbnail()){ ?>              
+                <?php the_post_thumbnail('thumbnail', ['class' => 'news_img']) ?>
             <?php } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="news_img">
-            <?php } ?>
-
-            <?php if (has_post_thumbnail()){  ?>
-                <?php the_post_thumbnail('thumbnail', array('class'=> 'news_img')); ?>
-            <?php } else { ?>
-
-
+            <?php } ?>   
+  
 
             <div class="news_info">
                 <div class="news_meta">
@@ -43,9 +50,13 @@
                     ?>
                 </ul>
             </div>
+            </ul class="post_category">
+                <li><?php echo get_the_category_list(', '); ?></li>
         </a>
 
         <?php endwhile; ?>
+
+
 
         <!-- ここまで記事 -->
 
