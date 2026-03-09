@@ -15,7 +15,18 @@
         <?php while( have_posts()): the_post(); ?>
 
         <a href="<?php the_permalink(); ?>" class="news_item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="news_img">
+            <?php if (has_post_thumbnail()){ ?>
+                <?php the_post_thumbnail('thumbnail', array('class'=> 'news_img')); ?>
+            <?php } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="news_img">
+            <?php } ?>
+
+            <?php if (has_post_thumbnail()){  ?>
+                <?php the_post_thumbnail('thumbnail', array('class'=> 'news_img')); ?>
+            <?php } else { ?>
+
+
+
             <div class="news_info">
                 <div class="news_meta">
                     <time class="news_date"><?php the_time('Y.m.d'); ?></time>
