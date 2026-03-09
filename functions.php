@@ -23,6 +23,7 @@ function enqueue_style()
 
   wp_enqueue_style('archive', get_template_directory_uri() . '/css/archive.css');
 
+
 }
 
 //  wp_enqueue_scriptsは、CSSとJS両方を読み込むことができるメソッド。まぎらわしい
@@ -61,8 +62,10 @@ function set_post_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'set_post_archive', 10, 2);
 
+
 /*====================================
  * サムネイルを表示する（アイキャッチ画像）
 ====================================*/
 add_theme_support('post-thumbnails');
+
 

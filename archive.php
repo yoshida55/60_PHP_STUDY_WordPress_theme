@@ -16,6 +16,7 @@
         <a href="<?php the_permalink(); ?>" class="news_item">
 
 
+        
         <!-- サムネイル -->
             <?php if (has_post_thumbnail()){ ?>              
                 <?php the_post_thumbnail('thumbnail', ['class' => 'news_img']) ?>
@@ -74,7 +75,7 @@
 
         </a>
 
-        <?php endwhile; ?>
+        <?php endwhile ?>
 
 
 
