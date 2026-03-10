@@ -74,12 +74,13 @@
     </a>
 </section>
 
+
 <section class="works_section">
     <h2 class="sec_title">施工実績</h2>
     <div class="works_container">
         <!-- ここから記事 -->
         <a href="" class="works_item">
-            <img src="img/news.jpg" alt="" class="works_img">
+            <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="works_img">
             <div class="works_info">
                 <ul class="works_category">
                     <li>WEB制作</li>
@@ -89,6 +90,11 @@
         </a>
         <!-- ここまで記事 -->
     </div>
+</section>
+
+<!-- 問い合わせページ -->
+<section>
+    <?php get_template_part('template-parts/contact-form'); ?>
 </section>
 <!-- ここまで本文を記載 -->
 
