@@ -1,16 +1,26 @@
+.about_section {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 5rem 2rem;
 
-.about_section{
-    max-width: 100rem;
-    margin: 0 auto;
-    padding: 5rem 2rem;
+  border: 0.5rem solid red;
 }
 
-.company_info{
-    font-size: 1.6rem;
-    text-align: left;
+.company_info {
+  font-size: 1.6rem;
+  text-align: left;
+
+  border: 0.5rem solid red;
 }
 
 .company_info th,
-.company_info td{
-    padding: 1rem;
+.company_info td {
+  padding: 1rem;
+}
+
+.sec_msg {
+  font-size: 1.4rem;
+  color: #135580;
+  margin-bottom: 0.5rem;
+  border: 0.5rem solid red;
 }

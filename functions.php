@@ -18,13 +18,23 @@ function enqueue_style()
     wp_enqueue_style('single', get_template_directory_uri() . '/css/single.css');
   }
 
+  wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css');
+
   wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
 
 
   wp_enqueue_style('archive', get_template_directory_uri() . '/css/archive.css');
 
+  wp_enqueue_style('contact', get_template_directory_uri() . '/css/contact.css');
+  
+  wp_enqueue_style('about-php', get_template_directory_uri() . '/css/about.css' );
 
-}
+  wp_enqueue_style('hooter', get_template_directory_uri() . '/css/hooter.css' );
+
+
+  }
+
+
 
 //  wp_enqueue_scriptsは、CSSとJS両方を読み込むことができるメソッド。まぎらわしい
 add_action('wp_enqueue_scripts', 'enqueue_style');
@@ -38,7 +48,7 @@ function enqueue_script()
 
   wp_enqueue_script('jquery'); //wordpressに同梱されているjQueryを読み込む
   // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
-  wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
+  wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 
 
 }

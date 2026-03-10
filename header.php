@@ -18,6 +18,7 @@
             <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/works/')); ?>">制作実績</a></li>
             <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a></li>
             <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせ</a></li>
+
         </ul>
     </nav>
 </header>

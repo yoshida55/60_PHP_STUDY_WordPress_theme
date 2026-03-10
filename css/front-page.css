@@ -1,7 +1,13 @@
 .main_visual {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50rem;
+}
+.main_visual_img {
+  display: block;
+  width: 30rem;
+  height: 40rem;
+  object-fit: cover;
 }
 
 .news_section {
@@ -33,7 +39,6 @@
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
-
 
 .works_section {
   max-width: 100rem;

@@ -1,16 +1,66 @@
 
+
 <?php get_header(); ?>
 
 <!-- ここに本文を記載 -->
-<div class="main_visual">
+<div class="main_visual">``
     <!-- <img src="img/fv.jpg" alt=""> -->
-    <img src="<?php echo get_template_directory_uri(); ?>/img/fv.jpg" alt="" >
+    <img class = "main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="" >
 </div>
+
+<section>
+    <h2>練習</h2>
+    <?php
+
+
+        
+
+        
+        // $staff_obj2 = new class {
+        //     public $name = 'bob';
+        //     public $age = 25;
+        //     public $position = '課長';
+        // };
+
+
+        // echo $staff_obj2->name;
+        // echo $staff_obj2->age;
+
+        // $test_arr = array(
+        //     'name' => 'bob',
+        //     'age' => 25,
+        //     'position' => '課長'
+        // );
+
+        // foreach($test_arr as $key => $value){
+        //     echo $key . ':' . $value . '<br>';
+        // }
+
+        $test_arr = array
+            (
+                'name' => 'bob',
+                'age' => 25,
+                'position' => '課長'
+            );
+            
+            foreach ($test_arr as $key => $value)
+            {
+                echo $value . '<br>';
+            };
+
+
+
+
+
+    ?>
+
+
+</section>
 
 <section class="news_section">
     <h2 class="sec_title">お知らせ</h2>
-    <a href="" class="news_item">
-        <img src="img/news.jpg" alt="" class="news_img">
+    <a href="" class="news_item">``
+        <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="news_img">
         <div class="news_info">
             <div class="news_meta">
                 <time class="news_date">2023.10.01</time>

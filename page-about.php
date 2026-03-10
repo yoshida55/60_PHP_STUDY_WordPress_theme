@@ -1,9 +1,12 @@
 <?php get_header(); ?>
+
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
 
+
     <main>
       <section class="about_section">
+        <h2 class="sec_msg">ここを修正します</h2>
         <h2 class="sec_title">会社概要</h2>
         <table class="company_info">
 
