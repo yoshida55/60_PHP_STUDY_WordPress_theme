@@ -17,7 +17,7 @@
       <ul class="news_category">
         <li><?php the_category(', '); ?></li>
       </ul>
-      <h1 class="news_title">ブログのタイトル</h1>
+      <h1 class="news_title"><?php the_title(); ?></h1>
       <div class="news_meta">
         <time class="news_date" datetime="2025-5-16">2025.05.16</time>
         <p class="author">田中太郎</p>
