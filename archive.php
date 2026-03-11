@@ -41,7 +41,8 @@
                     ?>
                 </ul> -->
 
-                <!-- 記事のカテゴリ データがある場合だけ表示する-->
+                <!-- 
+                記事のカテゴリ データがある場合だけ表示する-->
                 <?php 
                 // if ( ! empty( $categories ) ) {
                 //     echo '<li>' . esc_html( $categories[0]->name ) . '</li>';
@@ -55,9 +56,8 @@
                 <!-- カテゴリ２ -->
                  <?php $categories = get_the_category(); ?>
                  <?php foreach($categories as $category){
-                    if($category->name !== 'Uncategorized'){
                         echo '<li class="news_test">'. $category->cat_name .'</li>';
-                 }};
+                 };
                  ?>
                 </ul>
 

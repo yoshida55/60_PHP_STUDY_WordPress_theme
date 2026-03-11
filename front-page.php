@@ -12,8 +12,8 @@
     <h2>練習</h2>
     <?php
 
-
-        
+        // タイトルを取得する。
+         echo get_the_title();  
 
         
         // $staff_obj2 = new class {
@@ -76,7 +76,7 @@
 
 
 <section class="works_section">
-    <h2 class="sec_title">施工実績</h2>
+    <h2 class="sec_title">施工実績(記事・ブログ)</h2>
     <div class="works_container">
         <!-- ここから記事 -->
         <a href="" class="works_item">

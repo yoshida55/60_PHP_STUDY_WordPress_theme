@@ -1,3 +1,5 @@
+<?php echo basename(__FILE__) . "<br>"; ?>
+
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
