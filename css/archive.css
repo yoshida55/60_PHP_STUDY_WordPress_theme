@@ -2,3 +2,40 @@
   border: 0.5rem solid red;
 }
 
+.news_excerpt {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+
+  list-style: none;
+}
+
+.page_numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+
+  list-style: none;
+}
+
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

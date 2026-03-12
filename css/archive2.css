@@ -92,12 +92,6 @@
   color: black;
 }
 
-.pagination .page-numbers.current {
-  background-color: black;
-  color: white;
-  border: 0.1rem solid red;
-}
-
 .aaa {
   font-size: 5rem;
   color: red;

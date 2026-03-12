@@ -3,7 +3,8 @@
 
   <?php $categories = get_the_category(); ?>
   <?php $firstCategory = $categories[0]->name; ?>
-  
+
+
 
 <main>
     <h1 class="page_title">お知らせ</h1>
@@ -60,50 +61,35 @@
                  };
                  ?>
                 </ul>
-
-
-
-
             </div>
-
-
-
-
-
-
         </a>
 
-        <?php endwhile ?>
-
-        <?php 
-        $arges = array(
-            'mid_size' => '1',
-            'type' => 'array',
-            );       
-        // 配列がセットされる   // ↓おそらくこれも決まった配列
-         $pagination =  paginate_links($arges);
-        
-         foreach($pagination as $page){
-            // strpos( '調べる文字列', '探す文字' )
-            if(strpos($page, 'current') !== false){
-                echo '<li class="current">' . $page . '</li>';
-             echo '<li>' . $page . '</li>';
-            }        
 
 
-            // $pagination・・・・$pagination = [
-            //   '<a href="?page=1">1</a>',              // 1ページ目のリンク
-            //     '<span class="current">2</span>',       // 今いるページ（2ページ目）
-            //     '<a href="?page=3">3</a>',              // 3ページ目のリンク
-            //     ];
+        <?php endwhile; ?>
 
+ 
+        <div class ="news_excerpt">
 
+        <?php        
+            $args = array(
+                'mid_size' => 1,
+                'type' => 'array',
+            );
+            $pagination = paginate_links($args);
+            foreach($pagination as $page){
+                // 現在のページに'current'という文字があったら、今開いているファイル
+                // 現在開いているページ//strposは引数の中に引数の文字があるか
+                if (strpos($page, 'current') !== false) {
+                    echo '<span class="current">' . $page . '</span>';
+                } else {
+                    echo '<span class="page_numbers">' . $page . '</span>';
+                }
+            }
+        ?>
 
+        </div>
 
-        // <!-- ここまで記事 -->
-
-        // <!-- ページネーション -->
-        // <?php paginate_links(); ?>
     </section>
 
 </main>
