@@ -22,12 +22,20 @@
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 10884}\")",
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 10905}\")",
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 10887}\")",
-      "Bash(start \"D:\\\\50_knowledge\\\\wordpress-theme-flow.html\")"
+      "Bash(start \"D:\\\\50_knowledge\\\\wordpress-theme-flow.html\")",
+      "Bash(python -c \"import openpyxl; wb = openpyxl.load_workbook\\(''C:/Users/sensh/Local Sites/newtesthome/app/public/wp-content/themes/60_PHP_STUDY_WordPress_theme/ワードプレス全体図.xlsx''\\); print\\(''シート:'', wb.sheetnames\\)\")",
+      "Bash(py --version)",
+      "Read(//c/tmp/**)",
+      "Bash(npm install:*)",
+      "Bash(npm list:*)",
+      "Bash(node -e \"require\\(''''xlsx''''\\)\")",
+      "Bash(node -e \":*)"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude\\projects\\c--Users-sensh-Local-Sites-newtesthome-app-public-wp-content-themes-60-PHP-STUDY-WordPress-theme",
       "C:\\Users\\sensh\\.claude",
-      "D:\\50_knowledge"
+      "D:\\50_knowledge",
+      "c:\\Users\\sensh\\Local Sites\\newtesthome\\app\\public\\wp-content\\themes\\60_PHP_STUDY_WordPress_theme"
     ]
   }
 }
