@@ -29,13 +29,19 @@
       "Bash(npm install:*)",
       "Bash(npm list:*)",
       "Bash(node -e \"require\\(''''xlsx''''\\)\")",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 14028}\")",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 14099}\")",
+      "Read(//c/Users/guest04/.claude/skills/review-css/**)",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 14136}\")",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 14151}\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude\\projects\\c--Users-sensh-Local-Sites-newtesthome-app-public-wp-content-themes-60-PHP-STUDY-WordPress-theme",
       "C:\\Users\\sensh\\.claude",
       "D:\\50_knowledge",
-      "c:\\Users\\sensh\\Local Sites\\newtesthome\\app\\public\\wp-content\\themes\\60_PHP_STUDY_WordPress_theme"
+      "c:\\Users\\sensh\\Local Sites\\newtesthome\\app\\public\\wp-content\\themes\\60_PHP_STUDY_WordPress_theme",
+      "c:\\Users\\sensh\\Local Sites\\newtesthome\\app\\public\\wp-content\\themes\\60_PHP_STUDY_WordPress_theme\\css"
     ]
   }
 }

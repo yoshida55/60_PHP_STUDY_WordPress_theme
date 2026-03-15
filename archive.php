@@ -5,37 +5,42 @@
     <h1 class="page_title">お知らせ</h1>
     <section class="news_section">
 
-        <?php while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()): ?>
 
-        <?php
-        $related_id = get_post_meta(get_the_ID(), 'related_test_id', true);
-        $url = $related_id ? get_permalink($related_id) : get_permalink();
-        ?>
-        <a href="<?php echo $url; ?>" class="news_item">
+            <?php while (have_posts()) : the_post(); ?>
 
-            <?php if (has_post_thumbnail()) { ?>
-                <?php the_post_thumbnail('thumbnail', ['class' => 'news_img']) ?>
-            <?php } else { ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="news_img">
-            <?php } ?>
+                <?php
+                $related_id = get_post_meta(get_the_ID(), 'related_test_id', true);
+                $url = $related_id ? get_permalink($related_id) : get_permalink();
+                ?>
+                <a href="<?php echo $url; ?>" class="news_item">
 
-            <div class="news_info">
-                <div class="news_meta">
-                    <time class="news_date"><?php the_time('Y.m.d'); ?></time>
-                    <p class="author"><?php the_author(); ?></p>
-                </div>
-                <h3 class="news_title"><?php the_title(); ?></h3>
-                <ul class="news_category">
-                    <?php $categories = get_the_category(); ?>
-                    <?php foreach ($categories as $category) {
-                        echo '<li class="news_test">' . $category->cat_name . '</li>';
-                    } ?>
-                </ul>
-            </div>
+                    <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail('large', array('class' => 'news_img')); ?>
+                    <?php else: ?>
+                        <img src="<?php echo get_theme_file_uri('img/news.jpg'); ?>" alt="" class="news_img">
+                    <?php endif; ?>
 
-        </a>
 
-        <?php endwhile; ?>
+                    <div class="news_info">
+                        <div class="news_meta">
+                            <time class="news_date"><?php the_time('Y.m.d'); ?></time>
+                            <p class="author"><?php the_author(); ?></p>
+                        </div>
+                        <h3 class="news_title"><?php the_title(); ?></h3>
+                        <ul class="news_category">
+                            <?php $categories = get_the_category(); ?>
+                            <?php foreach ($categories as $category) {
+                                echo '<li class="news_test">' . $category->cat_name . '</li>';
+                            } ?>
+                        </ul>
+                    </div>
+
+                </a>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
 
         <?php the_posts_pagination(); ?>
 

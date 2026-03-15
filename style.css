@@ -1,19 +1,15 @@
-
 /*
 Theme Name: 60_PHP_STUDY_WordPress_theme
 */
 
 /* 使用カラー */
 :root {
-
 }
-
 
 /* 使用フォント */
 :root {
   --NotoSans: "Noto Sans JP", sans-serif;
 }
-
 
 body {
   min-height: 100vh;
@@ -38,7 +34,6 @@ img {
   display: none;
 }
 
-
 /*fade表示関連*/
 
 .fade_in {
@@ -61,7 +56,6 @@ img {
   transform: translateY(0) !important;
 }
 
-
 @media screen and (max-width: 699.98px) {
   html {
     font-size: calc(10 / 375 * 100vw);
@@ -75,5 +69,45 @@ img {
   .sp_only {
     display: block;
   }
+}
 
+/* ┌─────────────────────────────────────────┐
+   │ 記事用　　　　　　                        │
+   └─────────────────────────────────────────┘ */
+
+.news_wrap {
+  max-width: 100rem;
+  margin: 5rem auto;
+}
+
+.news_title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.news_meta {
+  justify-content: flex-end;
+}
+
+.news_content {
+  margin: 3rem auto;
+  color: red;
+}
+
+.news_content h2 {
+  margin-top: 3rem;
+}
+
+.news_content p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.news_content img {
+  margin-top: 3rem;
+}
+
+.news_category {
+  font-size: 4rem;
 }

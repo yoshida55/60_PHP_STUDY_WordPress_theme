@@ -14,25 +14,26 @@ function enqueue_style()
   // wp_enqueue_style( $handle, $src)の$srcは、テーマのディレクトリを取得する関数と組み合わせて書くことが多い
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 
-  if(is_single()){
+  if (is_single()) {
     wp_enqueue_style('single', get_template_directory_uri() . '/css/single.css');
   }
 
-  wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css');
+  if (is_front_page()) {
+    wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css');
+  }
 
   wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
 
-
-  wp_enqueue_style('archive', get_template_directory_uri() . '/css/archive.css');
+  if (is_archive()) {
+    wp_enqueue_style('archive', get_template_directory_uri() . '/css/archive.css');
+  }
 
   wp_enqueue_style('contact', get_template_directory_uri() . '/css/contact.css');
-  
-  wp_enqueue_style('about-php', get_template_directory_uri() . '/css/about.css' );
 
-  wp_enqueue_style('hooter', get_template_directory_uri() . '/css/hooter.css' );
+  wp_enqueue_style('about-php', get_template_directory_uri() . '/css/about.css');
 
-
-  }
+  wp_enqueue_style('hooter', get_template_directory_uri() . '/css/hooter.css');
+}
 
 
 
@@ -49,8 +50,6 @@ function enqueue_script()
   wp_enqueue_script('jquery'); //wordpressに同梱されているjQueryを読み込む
   // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
   wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
-
-
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_script');
@@ -85,5 +84,3 @@ register_post_type('test', [
  * サムネイルを表示する（アイキャッチ画像）
 ====================================*/
 add_theme_support('post-thumbnails');
-
-

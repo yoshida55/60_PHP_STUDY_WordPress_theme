@@ -2,23 +2,25 @@
   border: 0.5rem solid red;
 }
 
-.news_excerpt {
+/* サムネイルとニュースエリアをflex */
+.news_item {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.news_item:not(:last-of-type) {
+  margin-bottom: 3rem;
 }
 
-.current {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* サムネイル画像 */
+.news_img {
+  width: 50%;
+}
 
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-
-  list-style: none;
+/* ニュースエリア */
+.news_info {
+  margin: auto;
 }
 
 .page_numbers {

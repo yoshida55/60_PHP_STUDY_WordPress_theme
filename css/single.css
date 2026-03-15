@@ -1,6 +1,11 @@
+/* ┌─────────────────────────────────────────┐
+   │ 記事用　　　　　　                        │
+   └─────────────────────────────────────────┘ */
+
 .news_wrap {
-  max-width: 100rem;
+  max-width: 50%;
   margin: 5rem auto;
+  border: 0.5rem solid red;
 }
 
 .news_title {
