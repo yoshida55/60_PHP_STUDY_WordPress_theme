@@ -80,7 +80,7 @@
         foreach($categories as $categoryOne):
           // クラス取得変数
           $class = ($categoryOne->term_id == $current_cat_id) ? 'current_categori : '';
-          echo "<li class="aaa
+          echo "<li class="' . $class. '"><a class="category" href ="''".></li>"
 
       ?>
       </ul>
