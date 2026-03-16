@@ -93,12 +93,16 @@
         // URLを取得
         $url = esc_url(get_category_link($categoryOne));
         // 名前を取得
-        $name = esc_html($categoryOne->name)
+        $name = esc_html($categoryOne->name);
 
 
         // HTMLを表示
-        echo "<li class=" . $class .'"' .">";
-        echo "<a class=" 
+        echo '<li class="' . $class .'">';
+        echo '<a class="test_link" href="' . $url . '">' . $name . '</a>';
+
+        echo "</li>";
+
+        endforeach;
 
 
         

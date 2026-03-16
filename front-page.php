@@ -1,52 +1,48 @@
-
-
 <?php get_header(); ?>
 
 <!-- ここに本文を記載 -->
 <div class="main_visual">``
     <!-- <img src="img/fv.jpg" alt=""> -->
-    <img class = "main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="" >
+    <img class="main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="">
 </div>
 
-<section>
-    <h2>練習</h2>
+<section>ええええええええええええええええええｗｗｗｗｗｗｗｑｑｑｑｑ
+    <h2>練習aaaaaaaaaaaddddええええいいいいえええeeeeeeeeeeeeeeeeeeeeeeeekkkkkkkkkkk</h2>
     <?php
 
-        // タイトルを取得する。
-         echo get_the_title();  
-
-        
-        // $staff_obj2 = new class {
-        //     public $name = 'bob';
-        //     public $age = 25;
-        //     public $position = '課長';
-        // };
+    // タイトルを取得する。
+    echo get_the_title();
 
 
-        // echo $staff_obj2->name;
-        // echo $staff_obj2->age;
+    // $staff_obj2 = new class {
+    //     public $name = 'bob';
+    //     public $age = 25;
+    //     public $position = '課長';
+    // };
 
-        // $test_arr = array(
-        //     'name' => 'bob',
-        //     'age' => 25,
-        //     'position' => '課長'
-        // );
 
-        // foreach($test_arr as $key => $value){
-        //     echo $key . ':' . $value . '<br>';
-        // }
+    // echo $staff_obj2->name;
+    // echo $staff_obj2->age;
 
-        $test_arr = array
-            (
-                'name' => 'bob',
-                'age' => 25,
-                'position' => '課長'
-            );
-            
-            foreach ($test_arr as $key => $value)
-            {
-                echo $value . '<br>';
-            };
+    // $test_arr = array(
+    //     'name' => 'bob',
+    //     'age' => 25,
+    //     'position' => '課長'
+    // );
+
+    // foreach($test_arr as $key => $value){
+    //     echo $key . ':' . $value . '<br>';
+    // }
+
+    $test_arr = array(
+        'name' => 'bob',
+        'age' => 25,
+        'position' => '課長'
+    );
+
+    foreach ($test_arr as $key => $value) {
+        echo $value . '<br>';
+    };
 
 
 
