@@ -72,7 +72,7 @@
 
       <!-- 画面？から取得したcategoryから全カテゴリの値を抽出して表示する -->
       <ul>
-      <?php  
+        <?php
         // 画面から入力されたカテゴリID（名）を取得、
         // get_categoriesで、カテゴリ全てを取得
         $current_cat_id = get_queried_object_id();
@@ -85,48 +85,100 @@
         // ---------------------------------------------------
 
         // 全カテゴリから一つずつIDを取得($categoryOne・・・全カテゴリのなかの一つ「画面のカテゴリ」ではない)
-        foreach($categories as $categoryOne):
+        foreach ($categories as $categoryOne):
           // クラス取得変数
           // もしもカテゴリ（全部の中の一つ）と管理画面で選ばれえたIDが一緒なら、クラス名をセット
-        $class = ($categoryOne->term_id == $current_cat_id) ? "c_link": "";
-        
-        // URLを取得
-        $url = esc_url(get_category_link($categoryOne));
-        // 名前を取得
-        $name = esc_html($categoryOne->name);
+          $class = ($categoryOne->term_id == $current_cat_id) ? "c_link" : "";
+
+          // URLを取得
+          $url = esc_url(get_category_link($categoryOne));
+          // 名前を取得
+          $name = esc_html($categoryOne->name);
 
 
-        // HTMLを表示
-        echo '<li class="' . $class .'">';
-        echo '<a class="test_link" href="' . $url . '">' . $name . '</a>';
+          // HTMLを表示
+          echo '<li class="' . $class . '">';
+          echo '<a class="test_link" href="' . $url . '">' . $name . '</a>';
 
-        echo "</li>";
+          echo "</li>";
 
         endforeach;
+        ?>
+
+      </ul>
 
 
-        
+      <ul>
+        <?php
+        // // 画面から入力されたカテゴリID（名）を取得、
+        // // get_categoriesで、カテゴリ全てを取得
+        // $current_cat_id = get_queried_object_id();
+        // $categories = get_categories();
 
-// // ① まず必要なデータを変数に入れる
-// $current_cat_id = get_queried_object_id();
-// $categories     = get_categories();
+        $getCategory =  get_queried_object_id()
 
-// foreach ( $categories as $category ) {
+        ?>
+      </ul>
 
-//     // ② クラス名を決める（三項演算子）
-//     $class = ( $category->term_id == $current_cat_id ) ? 'current-category' : '';
 
-//     // ③ URLと名前も変数に入れる ← ここがポイント！
-//     $url  = esc_url( get_category_link( $category ) );
-//     $name = esc_html( $category->name );
+      <ul>
+        <?php
+        // // 画面から入力されたカテゴリID（名）を取得、
+        // // get_categoriesで、カテゴリ全てを取得
 
-//     // ④ echoはシンプルに
-//     echo '<li class="' . $class . '">';
-//     echo '<a class="category_link" href="' . $url . '">' . $name . '</a>';
-//     echo '</li>';
-// }
+        // $current_cat_id = get_queried_object_id();
+        // $categories = get_categories();
 
-        
+
+        // // ---------------------------------------------------
+        // // ようするにカテゴリのオブジェクトから、ID,名前を取得
+        // // さらに、get_categori_url(オブジェクト)URLを取得するだけ
+        // // ---------------------------------------------------
+
+        // // 全カテゴリから一つずつIDを取得($categoryOne・・・全カテゴリのなかの一つ「画面のカテゴリ」ではない)
+        // foreach ($categories as $categoryOne):
+        //   // クラス取得変数
+        //   // もしもカテゴリ（全部の中の一つ）と管理画面で選ばれえたIDが一緒なら、クラス名をセット
+        //   $class = ($categoryOne->term_id == $current_cat_id) ? "c_link" : "";
+
+        //   // URLを取得
+        //   $url = esc_url(get_category_link($categoryOne));
+        //   // 名前を取得
+        //   $name = esc_html($categoryOne->name);
+
+
+        //   // HTMLを表示
+        //   echo '<li class="' . $class . '">';
+        //   echo '<a class="test_link" href="' . $url . '">' . $name . '</a>';
+
+        //   echo "</li>";
+
+        // endforeach;
+
+        ?>
+      </ul>
+
+
+      // // ① まず必要なデータを変数に入れる
+      // $current_cat_id = get_queried_object_id();
+      // $categories = get_categories();
+
+      // foreach ( $categories as $category ) {
+
+      // // ② クラス名を決める（三項演算子）
+      // $class = ( $category->term_id == $current_cat_id ) ? 'current-category' : '';
+
+      // // ③ URLと名前も変数に入れる ← ここがポイント！
+      // $url = esc_url( get_category_link( $category ) );
+      // $name = esc_html( $category->name );
+
+      // // ④ echoはシンプルに
+      // echo '<li class="' . $class . '">';
+        // echo '<a class="category_link" href="' . $url . '">' . $name . '</a>';
+        // echo '</li>';
+      // }
+
+
       </ul>
 
     <?php endif; ?>
