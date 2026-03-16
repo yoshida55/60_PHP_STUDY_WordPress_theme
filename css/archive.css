@@ -1,16 +1,12 @@
-.pagination {
-  border: 0.5rem solid red;
-}
-
 /* サムネイルとニュースエリアをflex */
 .news_item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
+  margin-bottom: 3rem;
 }
 .news_item:not(:last-of-type) {
-  margin-bottom: 3rem;
 }
 
 /* サムネイル画像 */
@@ -23,21 +19,41 @@
   margin: auto;
 }
 
-.page_numbers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.allCategory {
+  color: red;
+}
 
-  border: 0.1rem solid black;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+/* ┌─────────────────────────────────────────┐
+   │ ページネーションエリア                        │
+   └─────────────────────────────────────────┘ */
 
-  list-style: none;
+/* ページネーション全体 */
+.pagination {
 }
 
 .page-numbers {
-  display: flex;
+  border: 0.2rem solid black;
+}
+
+.page-numbers.current {
+  background-color: black;
+  color: white;
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+}
+
+/* ページネーションの番号と矢印を〇にする */
+.page-numbers,
+.page-numbers.prev,
+.page-numbers.next {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  width: 6rem;
+  height: 6rem;
+  border: 0.2rem solid black;
+  border-radius: 50%;
 }

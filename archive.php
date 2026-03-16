@@ -7,14 +7,19 @@
 
     <?php if (have_posts()): ?>
 
+      <!-- 投稿がある場合、最後までループする -->
       <?php while (have_posts()) : the_post(); ?>
 
+        <!-- クリックを押した時に記事に飛ばせる機能・不明 -->
         <?php
         $related_id = get_post_meta(get_the_ID(), 'related_test_id', true);
         $url = $related_id ? get_permalink($related_id) : get_permalink();
         ?>
+
+        <!-- 上記で取得した、URLをリンクに設定すしaタグを生成 　-->
         <a href="<?php echo $url; ?>" class="news_item">
 
+          <!-- サムネイルへのリンクを表示する -->
           <?php if (has_post_thumbnail()): ?>
             <?php the_post_thumbnail('large', array('class' => 'news_img')); ?>
           <?php else: ?>
@@ -22,6 +27,7 @@
           <?php endif; ?>
 
 
+          <!-- ニュースエリアを設定する -->
           <div class="news_info">
             <div class="news_meta">
               <time class="news_date"><?php the_time('Y.m.d'); ?></time>
@@ -43,9 +49,41 @@
             </ul>
           </div>
 
+          <!-- カテゴリを取得・全カテゴリをいっきに取得（なおget_the_categoryはひとつづつ取得） -->
+
+
+
         </a>
 
+
+
       <?php endwhile; ?>
+
+      <ul>
+
+        <?php
+        $allCategorys = get_categories();
+        foreach ($allCategorys as $category):
+          echo '<li class= "allCategory">' . esc_html($category->name)  . '</li>';
+        endforeach;
+        ?>
+
+      </ul>
+
+      <!-- 画面？から取得したcategoryから全カテゴリの値を抽出して表示する -->
+      <ul>
+      <?php  
+        $current_cat_id = get_queried_object_id();
+        $categories = get_categories();
+
+        // 全カテゴリから一つずつIDを取得($categoryOne・・・全カテゴリのなかの一つ「画面のカテゴリ」ではない)
+        foreach($categories as $categoryOne):
+          // クラス取得変数
+          $class = ($categoryOne->term_id == $current_cat_id) ? 'current_categori : '';
+          echo "<li class="aaa
+
+      ?>
+      </ul>
 
     <?php endif; ?>
 
