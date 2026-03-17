@@ -23,14 +23,14 @@
           <?php if (has_post_thumbnail()): ?>
             <?php the_post_thumbnail('large', array('class' => 'news_img')); ?>
           <?php else: ?>
-            <img src="<?php echo get_theme_file_uri('img/news.jpg'); ?>" alt="" class="news_img">
+            <img src="<?php echo get_theme_file_uri('img/chrome_P6loBCP3hY.png'); ?>" alt="" class="news_img">
           <?php endif; ?>
 
 
-          <!-- ニュースエリアを設定する -->
+          <!-- ニュースエリアを設定する 取得した記事のタイトル・カテゴリなどを表示(Uncategorized)以外-->
           <div class="news_info">
             <div class="news_meta">
-              <time class="news_date"><?php the_time('Y.m.d'); ?></time>
+              <time class="news_date"><?php the_date('Y.n.j'); ?></time>
               <p class="author"><?php the_author(); ?></p>
             </div>
             <h3 class="news_title"><?php the_title(); ?></h3>
@@ -158,7 +158,7 @@
         ?>
       </ul>
 
-
+<!-- 
       // // ① まず必要なデータを変数に入れる
       // $current_cat_id = get_queried_object_id();
       // $categories = get_categories();
@@ -176,14 +176,21 @@
       // echo '<li class="' . $class . '">';
         // echo '<a class="category_link" href="' . $url . '">' . $name . '</a>';
         // echo '</li>';
-      // }
+      // } -->
 
 
       </ul>
 
     <?php endif; ?>
 
-    <?php the_posts_pagination(); ?>
+    <?php $args = array(
+      'mid_size' => 1,
+      'prev_text' => "<<",
+      'next_text' => '>>',
+      'screen_reader_text' => ' ',
+    );
+    the_posts_pagination($args); ?>
+
 
   </section>
 </main>

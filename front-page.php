@@ -6,8 +6,8 @@
     <img class="main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="">
 </div>
 
-<section>ええええええええええええええええええｗｗｗｗｗｗｗｑｑｑｑｑ
-    <h2>練習aaaaaaaaaaaddddええええいいいいえええeeeeeeeeeeeeeeeeeeeeeeeekkkkkkkkkkk</h2>
+<section>
+    <h2></h2>
     <?php
 
     // タイトルを取得する。
