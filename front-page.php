@@ -14,6 +14,7 @@
     echo get_the_title();
 
 
+
     // $staff_obj2 = new class {
     //     public $name = 'bob';
     //     public $age = 25;
@@ -39,6 +40,9 @@
         'age' => 25,
         'position' => '課長'
     );
+
+
+
 
     foreach ($test_arr as $key => $value) {
         echo $value . '<br>';
