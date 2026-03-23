@@ -9,7 +9,6 @@
 .news_item:not(:last-of-type) {
 }
 
-
 /* サムネイル画像 */
 .news_img {
   width: 50%;
@@ -57,4 +56,18 @@
   height: 6rem;
   border: 0.2rem solid black;
   border-radius: 50%;
+  font-size: 4rem;
 }
+
+/* <nav class="navigation pagination" aria-label="投稿ナビゲーション">
+  <div class="nav-links">
+    <!-- 現在のページ -->
+    <span aria-current="page" class="page-numbers current">1</span>
+    
+    <!-- 次のページへのリンク -->
+    <a class="page-numbers" href="...">2</a>
+    
+    <!-- 次のページボタン -->
+    <a class="next page-numbers" href="...">次へ</a>
+  </div>
+</nav> */

@@ -6,6 +6,7 @@
     <img class="main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="">
 </div>
 
+
 <section>
     <h2></h2>
     <?php
