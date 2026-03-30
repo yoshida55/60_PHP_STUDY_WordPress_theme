@@ -1,3 +1,4 @@
+<?php echo '【テンプレート】' . basename(__FILE__); ?>
 <?php get_header(); ?>
 
 <!-- ここに本文を記載 -->

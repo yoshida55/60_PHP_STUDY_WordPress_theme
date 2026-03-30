@@ -65,7 +65,8 @@
           </a>
 
           <?php
-          // 表示されているカテゴリを取得
+          // 現在、表示されているカテゴリを取得。全カテゴリを取得して、ループで回す。
+          // 一致したら、クラスをつける。（した場合としない場合ではクラス名をかえる）
           $theCategoriesId = get_queried_object_id();
 
           $allCategories = get_categories();
