@@ -72,7 +72,7 @@ function set_post_archive($args, $post_type)
 add_filter('register_post_type_args', 'set_post_archive', 10, 2);
 
 
-
+// これはカスタム投稿タイプのときだけ利用するのであまりきにしない。
 register_post_type('test', [
   'label'       => 'テスト投稿',
   'public'      => true,
