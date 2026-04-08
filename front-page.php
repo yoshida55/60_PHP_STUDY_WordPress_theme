@@ -1,103 +1,57 @@
-<?php echo '【テンプレート】' . basename(__FILE__); ?>
-<?php get_header(); ?>
+  <?php get_header(); ?>
 
-<!-- ここに本文を記載 -->
-<div class="main_visual">``
-    <!-- <img src="img/fv.jpg" alt=""> -->
-    <img class="main_visual_img" src="<?php echo get_theme_file_uri('/img/fv.jpg'); ?>" alt="">
-</div>
+  <ul class="slider_item">
+    <li><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
+    <li><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
+    <li><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
+    <li><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
 
+  </ul>
 
-<section>
-    <h2></h2>
-    <?php
+  <main id="front-page">
 
-    // タイトルを取得する。
-    echo get_the_title();
-
-
-
-    // $staff_obj2 = new class {
-    //     public $name = 'bob';
-    //     public $age = 25;
-    //     public $position = '課長';
-    // };
-
-
-    // echo $staff_obj2->name;
-    // echo $staff_obj2->age;
-
-    // $test_arr = array(
-    //     'name' => 'bob',
-    //     'age' => 25,
-    //     'position' => '課長'
-    // );
-
-    // foreach($test_arr as $key => $value){
-    //     echo $key . ':' . $value . '<br>';
-    // }
-
-    $test_arr = array(
-        'name' => 'bob',
-        'age' => 25,
-        'position' => '課長'
-    );
-
-
-
-
-    foreach ($test_arr as $key => $value) {
-        echo $value . '<br>';
-    };
-
-
-
-
-
-    ?>
-
-
-</section>
-
-<section class="news_section">
-    <h2 class="sec_title">お知らせ</h2>
-    <a href="" class="news_item">``
-        <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="news_img">
-        <div class="news_info">
-            <div class="news_meta">
-                <time class="news_date">2023.10.01</time>
-                <p class="author">田中太郎</p>
-            </div>
-            <h3 class="news_title">お知らせタイトルが入ります。</h3>
-            <ul class="news_category">
-                <li>お知らせ</li>
-            </ul>
-        </div>
-    </a>
-</section>
-
-
-<section class="works_section">
-    <h2 class="sec_title">施工実績(記事・ブログ)</h2>
-    <div class="works_container">
-        <!-- ここから記事 -->
-        <a href="" class="works_item">
-            <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="works_img">
-            <div class="works_info">
-                <ul class="works_category">
-                    <li>WEB制作</li>
-                </ul>
-                <h3 class="works_title">施工実績タイトルが入ります</h3>
-            </div>
-        </a>
-        <!-- ここまで記事 -->
+    <div class="front_backcolor">
+      <section class="front_wrapper front_greeting">
+        <h2 class="greeting_title">あなたの「働きたい」を応援します！</h2>
+        <p>
+          リンクワークスは就労支援A型の事業所です。<br>
+          すべての利用者さんと【雇用契約】を結び、<br>
+          お仕事をして頂きます。<br>
+          そのため、最低賃金も保証され、<br>
+          雇用保険の加入や有給休暇制度もあります。<br>
+          私たちがしっかりとサポートします。ぜひご相談ください！
+        </p>
+      </section>
     </div>
-</section>
 
-<!-- 問い合わせページ -->
-<section>
-    <?php get_template_part('template-parts/contact-form'); ?>
-</section>
-<!-- ここまで本文を記載 -->
+    <section class="front_wrapper front_news">
+      <h2>お知らせ</h2>
+      <dl class="front_news_list">
+        <dt>2026.4.6</dt>
+        <dd>お知らせお知らせお知らせお知らせお知らせお知らせお知らせお知らせ</dd>
+        <dt>2026.4.6</dt>
+        <dd>お知らせお知らせお知らせお知らせお知らせお知らせお知らせお知らせ</dd>
+        <dt>2026.4.6</dt>
+        <dd>お知らせお知らせお知らせお知らせお知らせお知らせお知らせお知らせ</dd>
+      </dl>
+    </section>
 
-<?php get_footer(); ?>
+    <div class="front_backcolor">
+      <section class="front_wrapper front_office">
+        <h2 class="white_title">事業所</h2>
+        <ul class="front_office_list">
+          <li class="office_summary"><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
+          <li class="office_summary"><img src="<?php echo get_theme_file_uri('/img/image.png') ?>" alt=""></li>
+        </ul>
+        <a href="" class="office_link">詳しくはこちら</a>
+      </section>
+
+    </div>
+
+    <section class="front_wrapper front_contact">
+      <h2>お問い合わせ</h2>
+      <a href="" class="front_contact_link">お問い合わせはこちら</a>
+    </section>
+
+  </main>
+  <?php get_footer(); ?>
