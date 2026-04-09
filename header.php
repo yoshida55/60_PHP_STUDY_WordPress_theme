@@ -23,9 +23,8 @@
         <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/about/')); ?>">会社概要</a></li>
         <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/works/')); ?>">制作実績</a></li>
         <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a></li>
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせ</a></li>
+        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせa</a></li>
         <li><a href="<?php echo esc_url(home_url()); ?>" class="global_menu_link">リンクワークスとは</a></li>
-
       </ul>
     </nav>
   </header>

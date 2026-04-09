@@ -1,4 +1,5 @@
 <?php
+require_once get_template_directory() . '/debug_helper.php';
 
 /*====================================
  * CSS読み込み
