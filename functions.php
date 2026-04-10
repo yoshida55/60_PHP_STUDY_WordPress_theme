@@ -34,6 +34,8 @@ function enqueue_style()
   wp_enqueue_style('about-php', get_template_directory_uri() . '/css/about.css');
 
   wp_enqueue_style('hooter', get_template_directory_uri() . '/css/hooter.css');
+
+  wp_enqueue_style('contact7', get_template_directory_uri() . '/css/contact7.css');
 }
 
 

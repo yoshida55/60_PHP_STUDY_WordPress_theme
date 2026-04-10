@@ -1,0 +1,29 @@
+.form_wrap {
+  height: 20rem;
+}
+
+.wpcf7-textarea {
+  width: 100%;
+  height: 10rem;
+  outline: 0.1rem solid black;
+}
+
+.wpcf7-submit {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.test {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  background-color: black;
+  color: white;
+  border: none;
+}
