@@ -71,3 +71,14 @@
     <a class="next page-numbers" href="...">次へ</a>
   </div>
 </nav> */
+
+/* ┌─────────────────────────────────────────┐
+   │ 新しく開始　テスト                        │
+   └─────────────────────────────────────────┘ */
+.title {
+  font-size: 2rem;
+}
+.category p {
+  display: inline;
+  margin: 0;
+}
