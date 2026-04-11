@@ -16,12 +16,17 @@ body {
   font-family: var(--NotoSans);
   position: relative;
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
 
 html {
   font-size: calc(10 / 1280 * 100vw);
 
-  font-size: 1rem;
   /* 画面幅1280pxで10px*/
   /* overflow-y: overlay; */
 }

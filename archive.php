@@ -1,28 +1,41 @@
 <?php echo '【テンプレート】' . basename(__FILE__); ?>
 <?php get_header(); ?>
-<section>
-  <ul>
-    <?php if (have_posts()):
-      while (have_posts()): the_post();
-    ?>
-        <?php $categories = get_the_category(); ?>
-        <li class="title"><?php echo esc_html($categories[0]->name); ?>
-        </li>
+<main class="archive_main">
+  <section>
+    <ul>
+      <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <li class="archive_item">
+            <?php $category = get_the_category();
+            if ($category) {
+              echo '<span class="category">' . esc_html($category[0]->name) . '</span>';
+            }; ?>
+            <a class="archive_permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <?php the_post_thumbnail('thumbnail', array('class' => 'archive_thumbnail')); ?>
+          </li>
 
-        <li class="title">タイトル：<?php echo esc_html(get_the_title()); ?></li>
+        <?php endwhile; ?>
+      <?php else : ?>
+        <li>記事が見つかりませんでした。</li>
+      <?php endif; ?>
+    </ul>
 
-        <li class="category">コンテンツ：<?php the_content(); ?></li>
 
-        <?php echo esc_url(get_permalink()); ?>
+    <!-- ページネーション -->
+    <div class="pagination">
+      <?php
+      echo paginate_links(array(
+        'prev_text' => '前へ',
+        'next_text' => '次へ',
+        'type' => 'list',
+      ));
+      ?>
+    </div>
 
-        <br>
 
-    <?php endwhile;
-    endif
-    ?>
-  </ul>
-</section>
 
+  </section>
+</main>
 
 
 <?php get_footer(); ?>

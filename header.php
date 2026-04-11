@@ -9,9 +9,10 @@
   <title>初めてのテーマづくり</title>
   <?php wp_head(); ?>
   <?php if (is_front_page()): ?>
-    <?php echo 'aaaa' ?>
+    <?php echo esc_html('aaaa'); ?>
   <?php endif; ?>
 </head>
+
 
 
 <body>

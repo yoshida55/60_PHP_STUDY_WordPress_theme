@@ -24,6 +24,7 @@ function enqueue_style()
   }
 
   wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
+  wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css');
 
   if (is_archive()) {
     wp_enqueue_style('archive', get_template_directory_uri() . '/css/archive.css');

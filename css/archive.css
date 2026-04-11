@@ -29,6 +29,7 @@
 
 /* ページネーション全体 */
 .pagination {
+  border: 0.5rem solid red;
 }
 
 .page-numbers {
@@ -45,9 +46,8 @@
 }
 
 /* ページネーションの番号と矢印を〇にする */
-.page-numbers,
-.page-numbers.prev,
-.page-numbers.next {
+a.page-numbers,
+span.page-numbers {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -81,4 +81,19 @@
 .category p {
   display: inline;
   margin: 0;
+}
+
+.archive_permalink {
+  display: block;
+  color: blue;
+  font-weight: 600;
+}
+
+.archive_thumbnail {
+  width: 20%;
+  height: auto;
+}
+
+.archive_item {
+  padding-bottom: 3rem;
 }

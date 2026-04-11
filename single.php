@@ -1,53 +1,42 @@
 <!-- ブラウザで該当のファイル名を表示する -->
 <?php echo '【テンプレート】' . basename(__FILE__) . "<br>"; ?>
-<?php echo '【テンプレート】' . basename(__FILE__) . "<br>"; ?>
 
 <?php get_header(); ?>
 
-<!-- ループ内のグローバルを宣言 -->
-<?php global $wp_query; ?>
+<section>
+    <?php
+    if (have_posts()):
+        while (have_posts()): the_post();
 
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post(); ?>
+            // カテゴリーの取得/表示
+            $getCategory = get_the_category();
+            if ($getCategory):
+                foreach ($getCategory as $category) {
+                    echo '<p class="single_category">' . esc_html($category->name) . '</p>';
+                }
+            endif;
 
-    <main>
+            // タイトルの取得/表示
+            the_title('<h1 class="single_title">', '</h1>');
 
-      <div class="page_title">お知らせ</div>
+            // 投稿日の取得/表示
+            echo '<p class="single_date">' . esc_html(get_the_date()) . '</p>';
 
-      <section class="news_wrap">
-        <ul class="news_category">
-          <li><?php the_category(', '); ?></li>
-        </ul>
-        <h1 class="news_title"><?php the_title(); ?></h1>
-        <div class="news_meta">
-          <time class="news_date" datetime="2025-4-27"><?php the_date('Y.n.j'); ?></time>
-          <p class="author"><?php the_author(); ?></p>
-        </div>
+            // アイキャッチ画像の取得/表示
+            if (has_post_thumbnail()):
+                the_post_thumbnail('full', array('class' => 'single_thumbnail'));
+            endif;
 
+            // 本文の取得/表示
+            the_content();
 
-        <a href="<?php the_permalink(); ?>" class="news_item"></a>
-
-        <?php if (has_post_thumbnail()): ?>
-          <?php the_post_thumbnail('large', array('class' => 'news_img')); ?>
-        <?php else: ?>
-          <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="new_msg">
-        <?php endif; ?>
-
-        <div class="news_content">
-          <?php the_title(); ?>
-          <?php the_content(); ?>
-        </div>
+            echo '<a href="' . esc_url(home_url('/news/')) . '" class="single_back">一覧へ戻る</a>';
 
 
-      </section>
-    </main>
+        endwhile;
+    endif;
+    ?>
 
-
-
-
-
-
-  <?php endwhile; ?>
-<?php endif; ?>
+</section>
 
 <?php get_footer(); ?>
