@@ -19,65 +19,63 @@
   margin: auto;
 }
 
-.allCategory {
-  color: red;
-}
-
 /* ┌─────────────────────────────────────────┐
    │ ページネーションエリア                        │
    └─────────────────────────────────────────┘ */
 
 /* ページネーション全体 */
 .pagination {
-  border: 0.5rem solid red;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+/* ページネーションの番号と矢印を〇にする */
 .page-numbers {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
   border: 0.2rem solid black;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: none;
 }
 
+/* 現在のページは黒く塗る */
 .page-numbers.current {
   background-color: black;
   color: white;
 }
 
-.page-numbers.prev,
-.page-numbers.next {
-}
-
-/* ページネーションの番号と矢印を〇にする */
-a.page-numbers,
-span.page-numbers {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 6rem;
-  height: 6rem;
-  border: 0.2rem solid black;
-  border-radius: 50%;
-  font-size: 4rem;
-}
-
-/* <nav class="navigation pagination" aria-label="投稿ナビゲーション">
+/* ★「自動で出力されるHTML」: typeによってかわる
+<nav class="navigation pagination">
   <div class="nav-links">
-    <!-- 現在のページ -->
-    <span aria-current="page" class="page-numbers current">1</span>
-    
-    <!-- 次のページへのリンク -->
+    <span class="page-numbers current">1</span>  ← 今のページ
     <a class="page-numbers" href="...">2</a>
-    
-    <!-- 次のページボタン -->
     <a class="next page-numbers" href="...">次へ</a>
   </div>
 </nav> */
 
+/* echo paginate_links(array(
+  'type' => 'list',   ← ここが重要
+));
+
+<ul class="page-numbers">   ← .nav-links は存在しない
+  <li><span class="page-numbers current">1</span></li>
+  <li><a class="page-numbers" href="...">2</a></li>
+</ul> */
+
 /* ┌─────────────────────────────────────────┐
    │ 新しく開始　テスト                        │
    └─────────────────────────────────────────┘ */
-.title {
-  font-size: 2rem;
-}
+
 .category p {
   display: inline;
   margin: 0;
@@ -96,4 +94,14 @@ span.page-numbers {
 
 .archive_item {
   padding-bottom: 3rem;
+}
+
+.archive_main {
+  display: flex; /* ← 追加 */
+  flex-direction: column; /* ← 追加 */
+}
+
+.archive_section {
+  display: flex;
+  flex-direction: column;
 }

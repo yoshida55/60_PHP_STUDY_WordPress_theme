@@ -1,7 +1,7 @@
 <?php echo '【テンプレート】' . basename(__FILE__); ?>
 <?php get_header(); ?>
 <main class="archive_main">
-  <section>
+  <section class="archive_section">
     <ul>
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -21,21 +21,22 @@
     </ul>
 
 
-    <!-- ページネーション -->
-    <div class="pagination">
-      <?php
-      echo paginate_links(array(
-        'prev_text' => '前へ',
-        'next_text' => '次へ',
-        'type' => 'list',
-      ));
-      ?>
-    </div>
-
-
-
   </section>
+  <!-- ページネーション -->
+  <div class="pagination">
+    <?php
+    $args = array(
+      'mid_size'           => 1,
+      'prev_text'          => '«',
+      'next_text'          => '»',
+      'screen_reader_text' => ' ',
+    );
+    the_posts_pagination($args);
+    ?>
+  </div>
 </main>
+
+
 
 
 <?php get_footer(); ?>

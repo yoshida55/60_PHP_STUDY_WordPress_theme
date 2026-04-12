@@ -2,10 +2,6 @@
 Theme Name: 60_PHP_STUDY_WordPress_theme
 */
 
-/* 使用カラー */
-:root {
-}
-
 /* 使用フォント */
 :root {
   --NotoSans: "Noto Sans JP", sans-serif;
@@ -20,8 +16,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 main {
-  flex: 1;
 }
 
 html {
