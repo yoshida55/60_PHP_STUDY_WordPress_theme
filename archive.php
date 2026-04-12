@@ -12,7 +12,7 @@
             }; ?>
             <a class="archive_permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php the_post_thumbnail('thumbnail', array('class' => 'archive_thumbnail')); ?>
-          </li>
+          </li>the_permalink
 
         <?php endwhile; ?>
       <?php else : ?>

@@ -19,13 +19,12 @@
 
   <header class="header">
     <nav class="header_nav">
-      <ul class="header_nav_list">
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/about/')); ?>">会社概要</a></li>
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/works/')); ?>">制作実績</a></li>
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a></li>
-        <li class="header_nav_item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせa</a></li>
-        <li><a href="<?php echo esc_url(home_url()); ?>" class="global_menu_link">リンクワークスとは</a></li>
-      </ul>
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'header-menu',
+        'container'      => false,
+        'menu_class'     => 'header_nav_list',
+      ));
+      ?>
     </nav>
   </header>

@@ -87,3 +87,18 @@ register_post_type('test', [
  * サムネイルを表示する（アイキャッチ画像）
 ====================================*/
 add_theme_support('post-thumbnails');
+
+/*====================================
+ * contact 7を有効化する
+ * ====================================*/
+function my_theme_setup()
+{
+  add_theme_support('post-thumbnails'); // アイキャッチ
+  add_theme_support('menus');          // メニュー機能を有効化
+
+  // メニューの「場所」を登録する
+  register_nav_menus(array(
+    'header-menu' => 'ヘッダーメニュー１',
+  ));
+}
+add_action('after_setup_theme', 'my_theme_setup');
