@@ -18,7 +18,7 @@
 <body>
 
   <header class="header">
-    <nav class="header_nav">
+    <nav class="h``eader_nav">
       <?php
       wp_nav_menu(array(
         'theme_location' => 'header-menu',

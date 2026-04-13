@@ -14,11 +14,16 @@
   gap: 2rem;
 }
 
-
-.page_title{
+.page_title {
   font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
   padding: 5rem 0;
-  background-image: url('../img/fv.jpg');
+  background-image: url("../img/fv.jpg");
+}
+
+.header_nav ul {
+  display: flex; /* 横並びにする */
+  list-style: none; /* 点を消す */
+  gap: 2rem; /* 間隔 */
 }

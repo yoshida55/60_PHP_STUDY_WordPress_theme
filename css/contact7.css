@@ -20,10 +20,20 @@
 }
 .test {
   display: block;
-  margin: 2rem auto;
+  margin-right: auto;
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
-  background-color: black;
   color: white;
   border: none;
+  outline: 0.1rem solid black;
+}
+
+.drop {
+  display: block;
+  margin-right: auto;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  color: black;
+  border: none;
+  outline: 0.1rem solid black;
 }
