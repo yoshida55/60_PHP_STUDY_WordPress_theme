@@ -1,3 +1,5 @@
 {
-  "cssToHtmlJumper.phpProxyUrl": "http://newtesthome.local"
+  "cssToHtmlJumper.phpProxyUrl": "http://newtesthome.local",
+  "claudeCode.initialPermissionMode": "acceptEdits",
+  "claudeCode.hideOnboarding": false
 }
