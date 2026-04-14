@@ -78,9 +78,17 @@
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
           <li class="archive_item">get_the_category
-            <?php $category = get_the_category();
+            <?php $category = get_the_category(); ?>
+
+            // カテゴリを表示
+            the_category();
+
+            <div class="archive_category_list">
+              <?php echo esc_html(get_the_category_list(', ')); ?>
+            </div>
+
             if ($category) {
-              echo '<span class="category">' . esc_html($category[0]->name) . '</span>';
+            echo '<span class="category">' . esc_html($category[0]->name) . '</span>';
             }; ?>
             <a class="archive_permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php the_post_thumbnail('thumbnail', array('class' => 'archive_thumbnail')); ?>
