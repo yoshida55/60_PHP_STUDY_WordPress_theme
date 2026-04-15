@@ -1,48 +1,51 @@
+<?php echo '【テンプレート】' . basename(__FILE__) . "<br>"; ?>
+
 <?php get_header(); ?>
 
 
+<h1 class="page_title">制作実績一覧に対する、付随するターム</h1>
 <main>
 
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-  <section class="news_section">
 
-    <h1 class="page_title">制作実績</h1>
 
-    <div class="works_container">
+      <ul>
+        <!-- /それぞれに記事タイプに紐づく記事のそれぞれのタームを取得する/ -->
+        <?php
+        $terms = get_the_terms(get_the_ID(), 'works-category');
+        foreach ($terms as $term) {
+          echo '<li>' . esc_html($term->name) . '</li>';
+        }
+        ?>
+      </ul>
 
-      <a href="" class="works_item">
-        <img src="<?php echo get_template_directory_uri("img/mainvisual.jpg"); ?>" alt="" class="works_img">
-        <div class="works_info">
-          <ul class="works_category">
-            <li>WEB制作</li>
-          </ul>
-          <h2 class="works_title">お知らせタイトルが入ります。</h2>
-        </div>
-      </a>
+      <br>
+    <?php endwhile; ?>
+  <?php endif; ?>
 
-      <a href="" class="works_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="works_img">
-        <div class="works_info">
-          <ul class="works_category">
-            <li>WEB制作</li>
-          </ul>
-          <h2 class="works_title">お知らせタイトルが入ります。</h2>
-        </div>
-      </a>
+  <br>
 
-      <a href="" class="works_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/news.jpg" alt="" class="works_img">
-        <div class="works_info">
-          <ul class="works_category">
-            <li>WEB制作</li>
-          </ul>
-          <h2 class="works_title">お知らせタイトルが入ります。</h2>
-        </div>
-      </a>
-    </div>
+  <div>制作実績一覧に対する、すべてのターム</div>
 
-  </section>
+  <ul>
+    <!-- すべてのタームを取得する -->
+    <?php
+    $terms = get_terms('works-category');
+    foreach ($terms as $term) {
+      echo '<li>' . esc_html($term->name) . '</li>';
+    }
+    ?>
+  </ul>
+
+
+
+
+
 
 </main>
+
+
 
 <?php get_footer(); ?>
