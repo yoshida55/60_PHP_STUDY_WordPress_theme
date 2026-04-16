@@ -33,11 +33,12 @@
         </div>
       </section>
 
+
+      <section class="front_wrapper front_contact">
+        <h2>お問い合わせ</h2>
+        <a href="" class="front_contact_link">お問い合わせはこちら</a>
+      </section>
     </main>
-    <section class="front_wrapper front_contact">
-      <h2>お問い合わせ</h2>
-      <a href="" class="front_contact_link">お問い合わせはこちら</a>
-    </section>
 
     <?php get_footer(); ?>
 
