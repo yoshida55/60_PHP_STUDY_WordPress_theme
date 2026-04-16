@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php if ( have_posts() ) : ?>
-  <?php while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
 
     <main>
       <div class="page_title">制作事例</div>
@@ -8,14 +8,14 @@
       <section class="news_wrap">
 
         <h1 class="news_title">制作事例のタイトル</h1>
-        
-    
+
+
         <div class="news_content">
 
           <!-- 見出しパーツ -->
           <h2 class="sec_title">小見出しが入ります。</h2>
           <!-- 見出しパーツここまで -->
-        
+
           <!-- 画像パーツ -->
           <img src="<?php echo get_theme_file_uri('/img/news.jpg'); ?>" alt="" class="news_img">
           <!-- 画像パーツここまで -->
@@ -27,14 +27,20 @@
           </p>
           <!-- 段落パーツここまで -->
 
-          
 
-          
+
+
         </div>
       </section>
 
     </main>
+    <section class="front_wrapper front_contact">
+      <h2>お問い合わせ</h2>
+      <a href="" class="front_contact_link">お問い合わせはこちら</a>
+    </section>
 
-  <?php endwhile;?>
-<?php endif;?>
-<?php get_footer();?>
+    <?php get_footer(); ?>
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php get_footer(); ?>
