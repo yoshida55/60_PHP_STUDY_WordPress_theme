@@ -1,10 +1,10 @@
 <?php echo '【テンプレート】' . basename(__FILE__) . "<br>"; ?>
 
 <?php get_header(); ?>
-
-
-<h1 class="page_title">制作実績一覧に対する、付随するターム</h1>
 <main>
+
+  <h1 class="page_title">制作実績一覧に対する、付随するターム</h1>
+
 
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -22,6 +22,7 @@
       </ul>
 
       <br>
+
     <?php endwhile; ?>
   <?php endif; ?>
 
@@ -41,10 +42,10 @@
 
 
 
-
-
-
 </main>
+
+
+
 
 
 

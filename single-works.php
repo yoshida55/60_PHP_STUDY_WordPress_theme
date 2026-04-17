@@ -1,8 +1,10 @@
 <?php get_header(); ?>
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post(); ?>
 
-    <main>
+<main style="flex: 1;">
+
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+
       <div class="page_title">制作事例</div>
 
       <section class="news_wrap">
@@ -38,10 +40,10 @@
         <h2>お問い合わせ</h2>
         <a href="" class="front_contact_link">お問い合わせはこちら</a>
       </section>
-    </main>
 
-    <?php get_footer(); ?>
 
-  <?php endwhile; ?>
-<?php endif; ?>
+    <?php endwhile; ?>
+  <?php endif; ?>
+</main>
+
 <?php get_footer(); ?>

@@ -8,9 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>初めてのテーマづくり</title>
   <?php wp_head(); ?>
-  <?php if (is_front_page()): ?>
-    <?php echo esc_html('aaaa'); ?>
-  <?php endif; ?>
 </head>
 
 
