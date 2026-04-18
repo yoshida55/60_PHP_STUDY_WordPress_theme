@@ -16,6 +16,7 @@
           the_post_thumbnail('thumbnail', array('class' => 'single_thumbnail'));
         } ?>
 
+
       <?php endwhile; ?>
     <?php endif; ?>
   </section>

@@ -10,7 +10,7 @@
                 <!-- 投稿の一覧を表示する -->
                 <ul>
                     <li>
-                        <a href='<?php echo esc_url(get_permalink()); ?>'>
+                        <a href='<?php the_permalink(); ?>'>
                             <?php the_title(); ?>
                         </a>
                     </li>
@@ -19,6 +19,8 @@
                         the_post_thumbnail('thumbnail', array('class' => 'archive_thumbnail'));
                     }
                     ?>
+
+
                 </ul>
 
 

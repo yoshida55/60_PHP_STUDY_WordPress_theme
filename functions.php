@@ -38,8 +38,9 @@ function enqueue_style()
 
   wp_enqueue_style('contact7', get_template_directory_uri() . '/css/contact7.css');
 
-  wp_enqueue_style('single_sweets', get_template_directory_uri() . '/css/single-sweets.css');
+  wp_enqueue_style('single-sweets', get_template_directory_uri() . '/css/single-sweets.css');
 }
+
 
 
 
@@ -91,7 +92,7 @@ register_post_type('test', [
 add_theme_support('post-thumbnails');
 
 /*====================================
- * contact 7を有効化する
+ * テーマのセットアップ
  * ====================================*/
 function my_theme_setup()
 {
