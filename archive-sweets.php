@@ -10,7 +10,7 @@
                 <!-- 投稿の一覧を表示する -->
                 <ul>
                     <li>
-                        <a href="<?php the_permalink(); ?>">
+                        <a href='<?php echo esc_url(get_permalink()); ?>'>
                             <?php the_title(); ?>
                         </a>
                     </li>
