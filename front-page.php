@@ -6,7 +6,7 @@
 
  <main id="front-page">
 
-   <!-- <a href="" class="works_item"></a> -->
+   <!-- /* カスタム投稿タイプ「sweets」の最新記事を1件表示するクエリ */ -->
    <?php
     $query = new WP_Query(
       array(
@@ -32,6 +32,10 @@
 
    <?php wp_reset_postdata(); // クエリのリセット 
     ?>
+
+
+
+
 
  </main>
 
