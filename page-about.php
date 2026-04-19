@@ -14,11 +14,11 @@
 
           <tr>
             <th>会社名</th>
-            <td>株式会社Test</td>
+            <td><?php the_field('company_name'); ?></td>
           </tr>
           <tr>
             <th>設立</th>
-            <td>2000年4月</td>
+            <td>2024年</td>
           </tr>
           <tr>
             <th>所在地</th>
@@ -30,8 +30,18 @@
           </tr>
           <tr>
             <th>事業内容</th>
-            <td>WEB制作</td>
+            <td><?php the_field('business'); ?></td>
           </tr>
+
+          <?php if (have_rows('company_info')) : ?>
+            <?php while (have_rows('company_info')) : the_row(); ?>
+              <tr>
+                <th><?php the_sub_field('items'); ?></th>
+                <td><?php the_sub_field('contents'); ?></td>
+              </tr>
+            <?php endwhile; ?>
+          <?php endif; ?>
+
         </table>
       </section>
 
