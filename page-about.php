@@ -43,7 +43,19 @@
           <?php endif; ?>
 
         </table>
+
+
+        <?php if (have_rows('partner')) : ?>
+          <?php while (have_rows('partner')) : the_row(); ?>
+            <div class="partner">
+              <img src="<?php the_sub_field('logo'); ?>" alt="">
+              <p><?php the_sub_field('company_name'); ?></p>
+              <a href="<?php the_sub_field('site_url'); ?>">サイトを見る</a>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </section>
+
 
     </main>
 
