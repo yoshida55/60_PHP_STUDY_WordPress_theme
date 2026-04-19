@@ -105,3 +105,9 @@ function my_theme_setup()
   ));
 }
 add_action('after_setup_theme', 'my_theme_setup');
+
+/*====================================
+ * contact7のスタイルを上書きするための関数/pタグの改行を削除
+ * ====================================*/
+
+add_filter('wpcf7_autop_or_not', '__return_false');
